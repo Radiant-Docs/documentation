@@ -1,0 +1,168 @@
+---
+title: Accordion
+---
+
+import Demo from "../../../../components/ui/demo/Demo.astro";
+import UiDisplay from "../../../../components/ui/demo/UiDisplay.astro";
+import CodeDemo from "../../../../components/ui/demo/CodeDemo.astro";
+
+The Accordion component allows you to create collapsible sections in your documentation. Users can expand and collapse content to focus on what they need, making it perfect for FAQs, detailed explanations, or organizing complex information.
+
+## Basic Usage
+
+<Demo>
+  <UiDisplay>
+    <Accordion title="Getting Started">
+      To get started with our framework, first install the package:
+
+      ```bash
+      npm install my-framework
+      ```
+
+      Then import and initialize the framework in your project.
+    </Accordion>
+
+    <Accordion title="Configuration">
+      Configure the framework by creating a config file:
+
+      ```javascript
+      // config.js
+      module.exports = {
+        theme: 'dark',
+        debug: process.env.NODE_ENV === 'development'
+      };
+      ```
+    </Accordion>
+
+  </UiDisplay>
+  <CodeDemo>
+    ````mdx
+    <Accordion title="Getting Started">
+      To get started with our framework, first install the package:
+
+      ```bash
+      npm install my-framework
+      ```
+
+      Then import and initialize the framework in your project.
+    </Accordion>
+
+    <Accordion title="Configuration">
+      Configure the framework by creating a config file:
+
+      ```javascript
+      // config.js
+      module.exports = {
+        theme: 'dark',
+        debug: process.env.NODE_ENV === 'development'
+      };
+      ```
+    </Accordion>
+    ````
+
+  </CodeDemo>
+</Demo>
+
+## With Icons
+
+You can add icons to your accordions using the `icon` prop. Icons are sourced from Lucide and help make your accordions more visually distinctive.
+
+<Demo>
+  <UiDisplay>
+    <Accordion title="Installation" icon="lucide:download">
+      Install the package using your preferred package manager:
+
+      ```bash
+      npm install my-package
+      # or
+      yarn add my-package
+      ```
+    </Accordion>
+
+    <Accordion title="Configuration" icon="lucide:settings">
+      Configure your settings in the config file:
+
+      ```json
+      {
+        "theme": "dark",
+        "language": "en"
+      }
+      ```
+    </Accordion>
+
+    <Accordion title="Help" icon="lucide:help-circle">
+      Need assistance? Check our documentation or contact support.
+    </Accordion>
+
+  </UiDisplay>
+  <CodeDemo>
+    ````mdx
+    <Accordion title="Installation" icon="lucide:download">
+      Install the package using your preferred package manager:
+
+      ```bash
+      npm install my-package
+      # or
+      yarn add my-package
+      ```
+    </Accordion>
+
+    <Accordion title="Configuration" icon="lucide:settings">
+      Configure your settings in the config file:
+
+      ```json
+      {
+        "theme": "dark",
+        "language": "en"
+      }
+      ```
+    </Accordion>
+
+    <Accordion title="Help" icon="lucide:help-circle">
+      Need assistance? Check our documentation or contact support.
+    </Accordion>
+    ````
+
+  </CodeDemo>
+</Demo>
+
+## Accordion Groups
+
+Use `AccordionGroup` to create a set of accordions where only one can be open at a time. This is perfect for FAQs or mutually exclusive options.
+
+<Demo>
+  <UiDisplay>
+    <AccordionGroup>
+      <Accordion title="What is this framework?">
+        Our framework is a modern, lightweight solution for building web applications with excellent developer experience and performance.
+      </Accordion>
+
+      <Accordion title="How do I get started?">
+        Getting started is easy! Install the package, create a new project, and follow our quickstart guide in the documentation.
+      </Accordion>
+
+      <Accordion title="Is it free to use?">
+        Yes, our framework is open source and free to use for both personal and commercial projects under the MIT license.
+      </Accordion>
+    </AccordionGroup>
+
+  </UiDisplay>
+  <CodeDemo>
+    ````mdx
+    <AccordionGroup>
+      <Accordion title="What is this framework?">
+        Our framework is a modern, lightweight solution for building web applications with excellent developer experience and performance.
+      </Accordion>
+
+      <Accordion title="How do I get started?">
+        Getting started is easy! Install the package, create a new project, and follow our quickstart guide in the documentation.
+      </Accordion>
+
+      <Accordion title="Is it free to use?">
+        Yes, our framework is open source and free to use for both personal and commercial projects under the MIT license.
+      </Accordion>
+    </AccordionGroup>
+    ````
+
+  </CodeDemo>
+</Demo>
